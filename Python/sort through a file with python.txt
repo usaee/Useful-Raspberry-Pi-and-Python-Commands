@@ -1,0 +1,10 @@
+
+
+with open( 'name of the text file goes here' ) as f:
+
+        line = f.readlines()[-1]  # This gets the last line in the file.
+
+        line = line.strip('\n')   # Gets rid of the 'new line' character.
+
+        print line
+

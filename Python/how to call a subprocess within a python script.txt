@@ -1,0 +1,15 @@
+
+#import subprocess
+
+#subprocess.call(["command line command goes here"], shell = True)
+
+
+
+EXAMPLE:
+
+ |
+ |
+ |
+ V
+
+#subprocess.call(["sudo python program.py &"], shell = True)

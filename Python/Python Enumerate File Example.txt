@@ -1,0 +1,8 @@
+
+
+
+    with open('temp.txt', 'r') as f:
+             for index, line in enumerate(f):
+                     if index == i:
+                            # < do stuff >
+	     
