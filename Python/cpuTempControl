@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 
+# This program is meant to run as a background process when starting up the raspberry pi.
+# This script will routinely check the CPU temperature and will shut the raspberry pi down if the temperature
+# is getting to high.
+
 import os
 import time
 import datetime
@@ -15,7 +19,7 @@ def mt():
                 t = temp.strip()[5:-2]
                 t = float(t)
 ########################
-                if t >= 55:
+                if t >= 55:				#if temp is above or equal to 55 degrees Celcius.
 			num = random.randint(1,30)
 			num2 = random.randint(1,30)
 			num3 = (num + num2)*0.5
@@ -27,7 +31,7 @@ def mt():
                         msg = '\n' + cTime + "\nShutting down because cpu temp is above 55'C\n"
                         f1.write(msg)
                         f1.close()
-                        subprocess.call(['sudo halt'], shell = True)
+                        subprocess.call(['sudo halt'], shell = True)	# shuts the raspberry pi down.
 
 
 
