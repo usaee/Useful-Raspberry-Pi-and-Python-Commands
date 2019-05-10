@@ -1,0 +1,63 @@
+
+
+sudo nano /boot/config.txt
+
+
+#Displays Max possible clock speed (determined by what you set its max to be):
+sudo cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
+
+
+#Displays the CURRENT clock speed:
+sudo cat /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_cur_freq
+
+
+#This is for Pi (3B) and (3B+)
+
+	|
+	|
+	|
+	|
+	|
+	|
+	V
+
+#uncomment to overclock the arm. 700 MHz is the default.
+arm_freq=1500
+gpu_freq=500
+core_freq=500
+sdram_freq=500
+sdram_schmoo=0x02000020
+over_voltage=6
+sdram_over_voltage=2
+force_turbo=1
+boot_delay=1
+
+
+
+
+###########################################################################
+
+
+
+
+#This is for (Pi Zero W)
+
+	|
+	|
+	|
+	|
+	|
+	|
+	V
+
+#uncomment to overclock the arm. 700 MHz is the default.
+arm_freq=1100
+gpu_freq=500
+core_freq=500
+sdram_freq=500
+sdram_schmoo=0x02000020
+over_voltage=6
+sdram_over_voltage=2
+force_turbo=1
+boot_delay=1
+

@@ -1,0 +1,154 @@
+#!/usr/bin/env python
+
+import subprocess
+
+
+def scr():
+	v1 = raw_input('enter "y" to continue or just press "Enter" to leave.\n> ')
+
+	if v1 == 'y':
+		print "The new program will include an EXECUTABLE header\n\n"
+		v2 = raw_input('what would you like to name this new python script?\n\nIf you dont know, just press enter and a filename will be generated for you.\n\nPlease DONT include ".py" as it will be included automatically\n\nName: ')
+
+		if v2 == '':
+			f = open('cntScr','r')
+			cont = f.readlines()
+			f.close()
+
+			c = '0'
+			incr = False
+			while True:
+				for line in cont:
+					if c in line:
+						incr = True
+						break
+				if incr == True:
+					c = int(c)
+					c += 1
+					c = str(c)
+					incr = False
+				else:
+					break
+			v2 = c
+
+		v2 += ".py"
+
+		print "\n"
+
+		msg = "#!/usr/bin/env python\n\n"
+
+		print("which imports would you like?\nIf you would like ALL type 'a'\nIf NONE or you are finished just press 'Enter'\n1. time\n2. subprocess\n3. talib\n4. em\n.\n.\n.\n.\n.\n.\n.\n")
+
+		cntr = 0
+
+		while True:
+			rep = ''
+			v3 = raw_input("> ")
+
+			if v3 == '':
+				break
+
+                        if v3 == 'a':
+                                        msg += "import time\n"
+                                        msg += "import subprocess\n"
+                                        msg += "import talib\n"
+                                        msg += "import em\n"
+
+					msg += "import requests\n"
+					msg += "import pandas_datareader.data as web\n"
+					msg += "import datetime\n"
+					msg += "from talib import abstract\n"
+					msg += "from bs4 import BeautifulSoup\n"
+					msg += "import urllib2\n"
+					msg += "import unicodedata\n"
+                                        break
+
+
+			if v3 == rep:
+				print "You already chose that import."
+
+
+			else:
+				if v3 == '1':
+					msg += "import time\n"
+					print "[ time ] is now imported"
+					cntr += 1
+				if v3 == '2':
+					msg += "import subprocess\n"
+					print "[ subprocess ] is now imported"
+					cntr += 1
+                                if v3 == '3':
+                                        msg += "import talib\n"
+                                        print "[ talib ] is now imported"
+                                        cntr += 1
+                                if v3 == '4':
+                                        msg += "import em\n"
+                                        print "[ em ] is now imported"
+                                        cntr += 1
+
+                                if v3 == '5':
+                                        msg += "import requests"
+                                        print "[ requests ] is now imported"
+                                        cntr += 1
+
+                                if v3 == '6':
+                                        msg += "import pandas_datareader.data as web"
+                                        print "[ pandas_datareader.data as web ] is now imported"
+                                        cntr += 1
+
+                                if v3 == '7':
+                                        msg += "import datetime"
+                                        print "[ datetime ] is now imported"
+                                        cntr += 1
+
+                                if v3 == '8':
+                                        msg += "from talib import abstract"
+                                        print "[ abstract ] is now imported"
+                                        cntr += 1
+
+                                if v3 == '9':
+                                        msg += "from bs4 import BeautifulSoup"
+                                        print "[ BeautifulSoup ] is now imported"
+                                        cntr += 1
+
+                                if v3 == '10':
+                                        msg += "import urllib2"
+                                        print "[ urllib2 ] is now imported"
+                                        cntr += 1
+
+                                if v3 == '11':
+                                        msg += "import unicodedata"
+                                        print "[ unicodedata ] is now imported"
+                                        cntr += 1
+
+
+			if cntr >= 11:
+				break
+
+			rep = v3
+
+		msg += "\n\n\ndef main():\n	pass\n\n\n#####################################################################\n\nmain()"
+
+		f = open(v2,'w+')
+
+		f.write(msg)
+
+		f.close()
+
+		f2 = open('cntScr','a')
+		f2.write(v2)
+		f2.write('\n')
+		f2.close()
+
+		print "\n\nYour new script [ {} ] is now complete!".format(v2)
+
+	else:
+		pass
+
+
+
+###########################################################################################################
+
+scr()
+
+

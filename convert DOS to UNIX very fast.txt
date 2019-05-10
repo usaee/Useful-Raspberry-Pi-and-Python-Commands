@@ -1,0 +1,7 @@
+
+
+	sudo apt-get install dos2unix -y
+
+	dos2unix <NAME OF FILE YOU WANT TO CONVERT>
+
+	#DOS file is now converted to UNIX

@@ -1,0 +1,14 @@
+
+
+1. in MobaXterm go to "/home/" and right click on "pi".
+
+2. click "permissions"
+
+3. check mark everything, and check mark "set permissions recursively"
+
+4. click "ok"
+
+5. type 'cd' to return to /pi/
+
+6. now you don't have to use 'sudo' command anymore to run or edit the programs located within /home/pi directory
+

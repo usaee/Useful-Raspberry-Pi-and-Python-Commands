@@ -1,0 +1,16 @@
+
+
+#on another computer, go to your SD card
+
+
+#edit config.txt, put this on the last line of the file -------->	dtoverlay=dwc2
+	     
+	     
+#edit cmdline.txt, put this between the words 'rootwait' and 'quiet'   -------->	modules-load=dwc2,g_ether
+
+
+#now create a new empty text file and name it 'ssh'
+
+
+#remove SD card
+

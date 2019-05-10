@@ -1,0 +1,44 @@
+
+
+apt-get install apache2 -y
+
+sudo apt-get install php libapache2-mod-php -y
+
+sudo apt-get install mysql-server php-mysql -y
+
+cd /var/www/html
+
+sudo chown pi: .
+
+rm *
+
+wget http://wordpress.org/latest.tar.gz
+
+tar xzf latest.tar.gz
+
+mv wordpress/* ./
+
+ls
+
+rm -rf wordpress latest.tar.gz
+
+sudo mysql -uroot -ppimylifeup
+
+create database wordpress;
+
+#Use (Ctrl + d) to exit MariaDB
+
+sudo service apache2 restart
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+
+
+ps -ef | grep ssh
+
+then in the left side there will be pid like 4635 or what ever
+
+kill -9 pid xxxx
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+
+
+
+string = 'the-new">string is here'
+
+
+newString = string.split('>',1)[-1]
+
+#Everything after the character '>' will be extracted from the line.
+
+print string       # output:      i-got-a-string">string is here
+
+print newString    # output:                      string is here
+
+
+

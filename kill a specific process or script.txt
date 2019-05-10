@@ -1,0 +1,17 @@
+
+
+
+sudo pkill -9 -f <NAME OF THE FILE OR PROGRAM>
+
+
+
+example:
+ 
+ |
+ |
+ |
+ |
+ V
+
+sudo pkill -9 -f program.py
+

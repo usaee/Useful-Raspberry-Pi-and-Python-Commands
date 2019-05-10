@@ -1,0 +1,9 @@
+
+
+	sudo pip install cython
+
+	sudo pip install numpy
+
+	sudo pip install pandas
+
+	

@@ -1,0 +1,22 @@
+
+#This is to check the current network Gateway, Router, etc.
+ |
+ |
+ V
+netstat -nr   
+
+sudo nano /etc/dhcpcd.conf
+
+
+#Put these next lines at the top of the file
+interface wlan0
+static ip_address=xxx.xxx.x.xx/24
+static routers=xxx.xxx.x.x
+static domain_name_servers=xxx.xxx.x.x
+
+
+sudo reboot
+
+
+
+ifconfig

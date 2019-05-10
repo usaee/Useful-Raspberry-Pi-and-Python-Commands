@@ -1,0 +1,31 @@
+
+
+
+#This will display all the processes running, including ones running in background.
+####################################################################################
+ |
+ |
+ |
+ |
+ V
+ps -A
+
+
+
+
+( OR )
+
+
+
+
+# This one is much better / descriptive and gives the PID explicitly.
+|
+|
+|
+|
+V
+ps x
+
+
+
+
